@@ -10,8 +10,7 @@ head
 aside#leftside
 aside#rightside
 #container
-  header
-    headcomp
+  include ./header.pug
   main
     aside#photos
       img(src='images/chili.jpg' alt='White Chicken Chili' width='180')
@@ -41,6 +40,5 @@ aside#rightside
             | {{ post.bio }}
           button.closeBtn.closeBtnB(v-on:click="$emit('close', post.thisBox = false)") Close
           p#close_info
-  footer
-    | &copy; Copyright FOOD BLOG
+  include ./footer.pug
 script(src='js/vue.js')
